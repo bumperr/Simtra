@@ -1,0 +1,629 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E6FBDEA6-03F7-4C8E-A4CE-DA80902F1B6A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>SimtraUser.index</StartupObject>
+    <RootNamespace>SimtraUser</RootNamespace>
+    <AssemblyName>SimtraUser</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsFormsWithCustomSubMain</MyType>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>SimtraUser.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>SimtraUser.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>SimTra Icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Guna.UI">
+      <HintPath>..\..\..\Downloads\Guna.UI-Framework-Lib-master\Guna.UI-Framework-Lib-master\Guna.UI-Framework-Lib\Guna.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Guna.UI2">
+      <HintPath>..\..\..\source\repos\Simtra\Guna_UI_Framework_Ultimate_v2.0.0.1\Guna_UI_Framework_Ultimate_v2.0.0.1\Guna.UI-Framework-Lib-master\Guna.UI2 WinForms\.net 4.0\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin\admin_acceptReject.Designer.vb">
+      <DependentUpon>admin_acceptReject.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\admin_acceptReject.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\admin_addAdmin.Designer.vb">
+      <DependentUpon>admin_addAdmin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\admin_addAdmin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\admin_contact.Designer.vb">
+      <DependentUpon>admin_contact.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\admin_contact.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\admin_login.Designer.vb">
+      <DependentUpon>admin_login.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\admin_login.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\admin_ViewAccount.Designer.vb">
+      <DependentUpon>admin_ViewAccount.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\admin_ViewAccount.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\admin_ViewAnalytic.Designer.vb">
+      <DependentUpon>admin_ViewAnalytic.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\admin_ViewAnalytic.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\admin_viewOrder.Designer.vb">
+      <DependentUpon>admin_viewOrder.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\admin_viewOrder.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\admin_viewRequest.Designer.vb">
+      <DependentUpon>admin_viewRequest.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\admin_viewRequest.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\templateMainPage_admin.Designer.vb">
+      <DependentUpon>templateMainPage_admin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\templateMainPage_admin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="company\company_addService_transport.Designer.vb">
+      <DependentUpon>company_addService_transport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="company\company_addService_transport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="company\company_addservice_hotel.Designer.vb">
+      <DependentUpon>company_addservice_hotel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="company\company_addservice_hotel.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="company\company_contactCustomer.Designer.vb">
+      <DependentUpon>company_contactCustomer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="company\company_contactCustomer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="company\company_login.Designer.vb">
+      <DependentUpon>company_login.vb</DependentUpon>
+    </Compile>
+    <Compile Include="company\company_login.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="company\company_requestAccount.Designer.vb">
+      <DependentUpon>company_requestAccount.vb</DependentUpon>
+    </Compile>
+    <Compile Include="company\company_requestAccount.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="company\company_service.Designer.vb">
+      <DependentUpon>company_service.vb</DependentUpon>
+    </Compile>
+    <Compile Include="company\company_service.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="company\company_updateBookingDetails_accomodation.Designer.vb">
+      <DependentUpon>company_updateBookingDetails_accomodation.vb</DependentUpon>
+    </Compile>
+    <Compile Include="company\company_updateBookingDetails_accomodation.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="company\company_updateBookingDetails_transport.Designer.vb">
+      <DependentUpon>company_updateBookingDetails_transport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="company\company_updateBookingDetails_transport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="company\company_ViewAnalytics.Designer.vb">
+      <DependentUpon>company_ViewAnalytics.vb</DependentUpon>
+    </Compile>
+    <Compile Include="company\company_ViewAnalytics.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="company\company_viewCustomer_customerSelect.Designer.vb">
+      <DependentUpon>company_viewCustomer_customerSelect.vb</DependentUpon>
+    </Compile>
+    <Compile Include="company\company_viewCustomer_customerSelect.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="company\company_viewCustomer_serviceSelect.Designer.vb">
+      <DependentUpon>company_viewCustomer_serviceSelect.vb</DependentUpon>
+    </Compile>
+    <Compile Include="company\company_viewCustomer_serviceSelect.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="company\company_update_RoomInformation.Designer.vb">
+      <DependentUpon>company_update_RoomInformation.vb</DependentUpon>
+    </Compile>
+    <Compile Include="company\company_update_RoomInformation.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="company\company_update_TransportInformation.Designer.vb">
+      <DependentUpon>company_update_TransportInformation.vb</DependentUpon>
+    </Compile>
+    <Compile Include="company\company_update_TransportInformation.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="company\templateMainPage_company.Designer.vb">
+      <DependentUpon>templateMainPage_company.vb</DependentUpon>
+    </Compile>
+    <Compile Include="company\templateMainPage_company.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="company\company_updateInformation.Designer.vb">
+      <DependentUpon>company_updateInformation.vb</DependentUpon>
+    </Compile>
+    <Compile Include="company\company_updateInformation.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Flow\contentTemplate.Designer.vb">
+      <DependentUpon>contentTemplate.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Flow\contentTemplate.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Flow\customMessageBox.Designer.vb">
+      <DependentUpon>customMessageBox.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Flow\customMessageBox.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Flow\customPanelService.Designer.vb">
+      <DependentUpon>customPanelService.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Flow\customPanelService.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Flow\listItem_accomodation_company.Designer.vb">
+      <DependentUpon>listItem_accomodation_company.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Flow\listItem_accomodation_company.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Flow\listItem_AllAccountView_company.Designer.vb">
+      <DependentUpon>listItem_AllAccountView_company.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Flow\listItem_AllAccountView_company.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Flow\listItem_AllAccountView_traveller.Designer.vb">
+      <DependentUpon>listItem_AllAccountView_traveller.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Flow\listItem_AllAccountView_traveller.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Flow\listItem_customerView_accomodation.Designer.vb">
+      <DependentUpon>listItem_customerView_accomodation.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Flow\listItem_customerView_accomodation.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Flow\listItem_customerView_transport.Designer.vb">
+      <DependentUpon>listItem_customerView_transport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Flow\listItem_customerView_transport.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Flow\listItem_Hotel.Designer.vb">
+      <DependentUpon>listItem_Hotel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Flow\listItem_Hotel.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Flow\listItem_transport.Designer.vb">
+      <DependentUpon>listItem_transport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Flow\listItem_transport.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Flow\listItem_transport_company.Designer.vb">
+      <DependentUpon>listItem_transport_company.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Flow\listItem_transport_company.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Flow\loading.Designer.vb">
+      <DependentUpon>loading.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Flow\loading.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Flow\logout.Designer.vb">
+      <DependentUpon>logout.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Flow\logout.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="index.vb" />
+    <Compile Include="dbConnection.vb" />
+    <Compile Include="Flow\reportBug.Designer.vb">
+      <DependentUpon>reportBug.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Flow\reportBug.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="SimtraDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SimtraDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="traveller\payment.Designer.vb">
+      <DependentUpon>payment.vb</DependentUpon>
+    </Compile>
+    <Compile Include="traveller\payment.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="traveller\traveller_checkout.Designer.vb">
+      <DependentUpon>traveller_checkout.vb</DependentUpon>
+    </Compile>
+    <Compile Include="traveller\traveller_checkout.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="traveller\traveller_contact_company.Designer.vb">
+      <DependentUpon>traveller_contact_company.vb</DependentUpon>
+    </Compile>
+    <Compile Include="traveller\traveller_contact_company.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="traveller\traveller_history.Designer.vb">
+      <DependentUpon>traveller_history.vb</DependentUpon>
+    </Compile>
+    <Compile Include="traveller\traveller_history.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="traveller\traveller_transportSelect.Designer.vb">
+      <DependentUpon>traveller_transportSelect.vb</DependentUpon>
+    </Compile>
+    <Compile Include="traveller\traveller_transportSelect.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="traveller\travellerBookingInput.Designer.vb">
+      <DependentUpon>travellerBookingInput.vb</DependentUpon>
+    </Compile>
+    <Compile Include="traveller\travellerBookingInput.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="traveller\templateMainPage.Designer.vb">
+      <DependentUpon>templateMainPage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="traveller\templateMainPage.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="traveller\traveller_hotelSelect.Designer.vb">
+      <DependentUpon>traveller_hotelSelect.vb</DependentUpon>
+    </Compile>
+    <Compile Include="traveller\traveller_hotelSelect.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="traveller\traveller_UploadDocument.Designer.vb">
+      <DependentUpon>traveller_UploadDocument.vb</DependentUpon>
+    </Compile>
+    <Compile Include="traveller\traveller_UploadDocument.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="traveller\update_information.Designer.vb">
+      <DependentUpon>update_information.vb</DependentUpon>
+    </Compile>
+    <Compile Include="traveller\update_information.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="traveller\traveller_login.Designer.vb">
+      <DependentUpon>traveller_login.vb</DependentUpon>
+    </Compile>
+    <Compile Include="traveller\traveller_login.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="traveller\traveller_register.Designer.vb">
+      <DependentUpon>traveller_register.vb</DependentUpon>
+    </Compile>
+    <Compile Include="traveller\traveller_register.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="template.Designer.vb">
+      <DependentUpon>template.vb</DependentUpon>
+    </Compile>
+    <Compile Include="template.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="traveller\viewDetails.Designer.vb">
+      <DependentUpon>viewDetails.vb</DependentUpon>
+    </Compile>
+    <Compile Include="traveller\viewDetails.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="traveller\viewMap.Designer.vb">
+      <DependentUpon>viewMap.vb</DependentUpon>
+    </Compile>
+    <Compile Include="traveller\viewMap.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="traveller\welcomeTraveller.Designer.vb">
+      <DependentUpon>welcomeTraveller.vb</DependentUpon>
+    </Compile>
+    <Compile Include="traveller\welcomeTraveller.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Admin\admin_acceptReject.resx">
+      <DependentUpon>admin_acceptReject.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\admin_addAdmin.resx">
+      <DependentUpon>admin_addAdmin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\admin_contact.resx">
+      <DependentUpon>admin_contact.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\admin_login.resx">
+      <DependentUpon>admin_login.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\admin_ViewAccount.resx">
+      <DependentUpon>admin_ViewAccount.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\admin_ViewAnalytic.resx">
+      <DependentUpon>admin_ViewAnalytic.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\admin_viewOrder.resx">
+      <DependentUpon>admin_viewOrder.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\admin_viewRequest.resx">
+      <DependentUpon>admin_viewRequest.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\templateMainPage_admin.resx">
+      <DependentUpon>templateMainPage_admin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="company\company_addService_transport.resx">
+      <DependentUpon>company_addService_transport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="company\company_addservice_hotel.resx">
+      <DependentUpon>company_addservice_hotel.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="company\company_contactCustomer.resx">
+      <DependentUpon>company_contactCustomer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="company\company_login.resx">
+      <DependentUpon>company_login.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="company\company_requestAccount.resx">
+      <DependentUpon>company_requestAccount.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="company\company_service.resx">
+      <DependentUpon>company_service.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="company\company_updateBookingDetails_accomodation.resx">
+      <DependentUpon>company_updateBookingDetails_accomodation.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="company\company_updateBookingDetails_transport.resx">
+      <DependentUpon>company_updateBookingDetails_transport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="company\company_ViewAnalytics.resx">
+      <DependentUpon>company_ViewAnalytics.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="company\company_viewCustomer_customerSelect.resx">
+      <DependentUpon>company_viewCustomer_customerSelect.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="company\company_viewCustomer_serviceSelect.resx">
+      <DependentUpon>company_viewCustomer_serviceSelect.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="company\company_update_RoomInformation.resx">
+      <DependentUpon>company_update_RoomInformation.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="company\company_update_TransportInformation.resx">
+      <DependentUpon>company_update_TransportInformation.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="company\templateMainPage_company.resx">
+      <DependentUpon>templateMainPage_company.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="company\company_updateInformation.resx">
+      <DependentUpon>company_updateInformation.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Flow\contentTemplate.resx">
+      <DependentUpon>contentTemplate.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Flow\customMessageBox.resx">
+      <DependentUpon>customMessageBox.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Flow\customPanelService.resx">
+      <DependentUpon>customPanelService.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Flow\listItem_accomodation_company.resx">
+      <DependentUpon>listItem_accomodation_company.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Flow\listItem_AllAccountView_company.resx">
+      <DependentUpon>listItem_AllAccountView_company.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Flow\listItem_AllAccountView_traveller.resx">
+      <DependentUpon>listItem_AllAccountView_traveller.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Flow\listItem_customerView_accomodation.resx">
+      <DependentUpon>listItem_customerView_accomodation.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Flow\listItem_customerView_transport.resx">
+      <DependentUpon>listItem_customerView_transport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Flow\listItem_Hotel.resx">
+      <DependentUpon>listItem_Hotel.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Flow\listItem_transport.resx">
+      <DependentUpon>listItem_transport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Flow\listItem_transport_company.resx">
+      <DependentUpon>listItem_transport_company.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Flow\loading.resx">
+      <DependentUpon>loading.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Flow\logout.resx">
+      <DependentUpon>logout.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Flow\reportBug.resx">
+      <DependentUpon>reportBug.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="traveller\payment.resx">
+      <DependentUpon>payment.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="traveller\traveller_checkout.resx">
+      <DependentUpon>traveller_checkout.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="traveller\traveller_contact_company.resx">
+      <DependentUpon>traveller_contact_company.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="traveller\traveller_history.resx">
+      <DependentUpon>traveller_history.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="traveller\traveller_hotelSelect.resx">
+      <DependentUpon>traveller_hotelSelect.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="traveller\traveller_transportSelect.resx">
+      <DependentUpon>traveller_transportSelect.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="traveller\travellerBookingInput.resx">
+      <DependentUpon>travellerBookingInput.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="traveller\templateMainPage.resx">
+      <DependentUpon>templateMainPage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="traveller\traveller_login.resx">
+      <DependentUpon>traveller_login.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="traveller\traveller_register.resx">
+      <DependentUpon>traveller_register.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="template.resx">
+      <DependentUpon>template.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="traveller\traveller_UploadDocument.resx">
+      <DependentUpon>traveller_UploadDocument.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="traveller\update_information.resx">
+      <DependentUpon>update_information.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="traveller\viewDetails.resx">
+      <DependentUpon>viewDetails.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="traveller\viewMap.resx">
+      <DependentUpon>viewMap.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="traveller\welcomeTraveller.resx">
+      <DependentUpon>welcomeTraveller.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+    <None Include="Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="SimtraDataSet.xsc">
+      <DependentUpon>SimtraDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="SimtraDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SimtraDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SimtraDataSet.xss">
+      <DependentUpon>SimtraDataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SimTra Icon.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>
